@@ -66,7 +66,7 @@ func HandlerAddOrder(c *gin.Context) {
 		return
 	}
 	request.Customer_ID = result
-	response, err := grpcClient.UpdateOrderDetails(c.Request.Context(), &request)
+	response, err := grpcClient.AddOrderDetails(c.Request.Context(), &request)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
@@ -81,11 +81,11 @@ func HandlerDeleteOrder(c *gin.Context) {
 	result, err1 := controller.ExtractCustomerID(token, constants.SecretKey)
 	fmt.Println(err1)
 
-	var user pb.RemoveOrderRequest
-	if err := c.ShouldBindJSON(&user); err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
-		return
-	}
+	// var user pb.RemoveOrderRequest
+	// if err := c.ShouldBindJSON(&user); err != nil {
+	// 	c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+	// 	return
+	// }
 	_, err := grpcClient.RemoveOrderCustomer(c.Request.Context(), &pb.RemoveOrderRequest{CustomerId: result})
 	if err != nil {
 		c.JSON(http.StatusBadGateway, gin.H{"status": "fail", "message": err.Error()})
@@ -95,16 +95,16 @@ func HandlerDeleteOrder(c *gin.Context) {
 }
 
 func HandlerGetOrderById(c *gin.Context) {
-	var res pb.GetOrderRequest
+	// var res pb.GetOrderRequest
 	grpcClient, _ := grpcclient.GetGrpcOrderService()
 	token := c.GetHeader("Authorization")
 	result1, err1 := controller.ExtractCustomerID(token, constants.SecretKey)
 	fmt.Println(err1)
-	if err := c.ShouldBindJSON(&res); err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
-		return
-	}
-	fmt.Println(res.CustomerId)
+	// if err := c.ShouldBindJSON(&res); err != nil {
+	// 	c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
+	// 	return
+	// }
+	// fmt.Println(res.CustomerId)
 	result, err := grpcClient.GetOrderDetails(c.Request.Context(), &pb.GetOrderRequest{CustomerId: result1})
 	if err != nil {
 		c.JSON(http.StatusBadGateway, gin.H{"status": "fail", "message": err.Error()})
