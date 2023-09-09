@@ -3,8 +3,11 @@ package main
 import (
 
 	//_ "github.com/kishorens18/ecommerce/cmd/client/docs"
-	"e_commerce_site/cmd/client/customer_client/routes"
+
+	customer "e_commerce_site/cmd/client/customer_client/routes"
 	grpcclient "e_commerce_site/cmd/client/grpcClient"
+	order "e_commerce_site/cmd/client/order_client/routes"
+	payment "e_commerce_site/cmd/client/payment_client/routes"
 
 	"github.com/gin-gonic/gin"
 )
@@ -26,11 +29,14 @@ import (
 
 // @host localhost:8080
 // @BasePath /api/v1
+
 func main() {
 	_, conn := grpcclient.GetGrpcCustomerServiceClient()
 	defer conn.Close()
 	r := gin.Default()
-	routes.AppRoutes(r)
+	customer.CustomerRoutes(r)
+	payment.PaymentRoutes(r)
+	order.OrderRoutes(r)
 	r.Run(":8080")
 
 }

@@ -1,4 +1,4 @@
-package controllers_test
+package customer_controller
 
 import (
 	"context"

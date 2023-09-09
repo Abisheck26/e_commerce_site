@@ -3,15 +3,15 @@ package main
 import (
 	"context"
 	"e_commerce_site/e_commerce_DAL/services"
+	controllers "e_commerce_site/e_commerce_controllers/customer_controllers"
 	"e_commerce_site/ecommerce_config/config"
 	"e_commerce_site/ecommerce_config/constants"
 
 	"fmt"
 	"net"
 
-	"github.com/kishorens18/ecommerce/controllers"
-
 	pro "e_commerce_site/ecommerce_proto/customer_proto"
+
 	"go.mongodb.org/mongo-driver/mongo"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/health"

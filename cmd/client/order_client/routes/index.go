@@ -1,12 +1,12 @@
-package route
+package routes
 
 import (
-	"ecommerce_order/cmd/client/controller"
+	"e_commerce_site/cmd/client/order_client/controller"
 
 	"github.com/gin-gonic/gin"
 )
 
-func AppRoutes(r *gin.Engine) {
+func OrderRoutes(r *gin.Engine) {
 
 	r.POST("/createorder", controller.HandlerCreateOrder)
 	r.POST("/updateorder", controller.HandlerUpdateOrder)

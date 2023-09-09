@@ -2,10 +2,10 @@ package controller
 
 import (
 	 "e_commerce_site/cmd/client/grpcClient"
-	controller "e_commerce_site/e_commerce_controllers/order_controller"
+	controller "e_commerce_site/e_commerce_controllers/order_controllers"
 	"e_commerce_site/ecommerce_config/constants"
 
-	pb "ecommerce_order/order_proto"
+	pb "e_commerce_site/ecommerce_proto/order_proto"
 	"fmt"
 	"net/http"
 
@@ -13,7 +13,7 @@ import (
 )
 
 func HandlerCreateOrder(c *gin.Context) {
-	grpcClient, _ := grpcclient.GetGrpcClientInstance()
+	grpcClient, _ := grpcclient.GetGrpcOrderService()
 	token := c.GetHeader("Authorization")
 	result, err1 := controller.ExtractCustomerID(token, constants.SecretKey)
 	fmt.Println(err1)
@@ -34,7 +34,7 @@ func HandlerCreateOrder(c *gin.Context) {
 }
 
 func HandlerUpdateOrder(c *gin.Context) {
-	grpcClient, _ := grpcclient.GetGrpcClientInstance()
+	grpcClient, _ := grpcclient.GetGrpcOrderService()
 	token := c.GetHeader("Authorization")
 	result, err1 := controller.ExtractCustomerID(token, constants.SecretKey)
 	fmt.Println(err1)
@@ -55,7 +55,7 @@ func HandlerUpdateOrder(c *gin.Context) {
 }
 
 func HandlerAddOrder(c *gin.Context) {
-	grpcClient, _ := grpcclient.GetGrpcClientInstance()
+	grpcClient, _ := grpcclient.GetGrpcOrderService()
 	token := c.GetHeader("Authorization")
 	result, err1 := controller.ExtractCustomerID(token, constants.SecretKey)
 	fmt.Println(err1)
@@ -76,7 +76,7 @@ func HandlerAddOrder(c *gin.Context) {
 }
 
 func HandlerDeleteOrder(c *gin.Context) {
-	grpcClient, _ := grpcclient.GetGrpcClientInstance()
+	grpcClient, _ := grpcclient.GetGrpcOrderService()
 	token := c.GetHeader("Authorization")
 	result, err1 := controller.ExtractCustomerID(token, constants.SecretKey)
 	fmt.Println(err1)
@@ -96,7 +96,7 @@ func HandlerDeleteOrder(c *gin.Context) {
 
 func HandlerGetOrderById(c *gin.Context) {
 	var res pb.GetOrderRequest
-	grpcClient, _ := grpcclient.GetGrpcClientInstance()
+	grpcClient, _ := grpcclient.GetGrpcOrderService()
 	token := c.GetHeader("Authorization")
 	result1, err1 := controller.ExtractCustomerID(token, constants.SecretKey)
 	fmt.Println(err1)

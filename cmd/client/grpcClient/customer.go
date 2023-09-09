@@ -4,7 +4,9 @@ import (
 	"log"
 	"sync"
 
-	 pb "e_commerce_site/ecommerce_proto/customer_proto"
+	"e_commerce_site/ecommerce_config/constants"
+	pb "e_commerce_site/ecommerce_proto/customer_proto"
+
 	"google.golang.org/grpc"
 )
 
@@ -19,7 +21,7 @@ var (
 func GetGrpcCustomerServiceClient() (GrpcCustomerServiceClient,*grpc.ClientConn) {
 	var conn *grpc.ClientConn
 	once.Do(func() { // <-- atomic, does not allow repeating
-		conn, err := grpc.Dial("localhost:5002", grpc.WithInsecure())
+		conn, err := grpc.Dial("localhost"+constants.Customer_Port, grpc.WithInsecure())
 		if err != nil {
 			log.Fatalf("Failed to connect: %v", err)
 		}
