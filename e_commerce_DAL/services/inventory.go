@@ -59,7 +59,7 @@ func (i *Inventory) CreateInventory(in []*models.Inventory) (*mongo.InsertManyRe
 	n := 0
 	for j := 0; j < len(in); j++ {
 		for i := n; i < len(inventory); i++ {
-			if if in[j].Item == inventory[i].Options.Ruling{
+			if in[j].Item == inventory[i].Options.Ruling{
 			in[j].Skus = append(in[j].Skus, *inventory[i])
 				}
 		}
