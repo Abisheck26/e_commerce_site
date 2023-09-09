@@ -58,10 +58,12 @@ func (i *Inventory) CreateInventory(in []*models.Inventory) (*mongo.InsertManyRe
 	fmt.Println(inventory)
 	n := 0
 	for j := 0; j < len(in); j++ {
-		for i := n; i < n+10; i++ {
+		for i := n; i < len(inventory); i++ {
+			if if in[j].Item == inventory[i].Options.Ruling{
 			in[j].Skus = append(in[j].Skus, *inventory[i])
+				}
 		}
-		n = n + 10
+	
 	}
 	fmt.Println("in", in)
 	inv := []interface{}{}
