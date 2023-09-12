@@ -11,7 +11,7 @@ service CustomerService {
     rpc UpdateCustomer(UpdateDetails)returns(CustomerResponse);
     rpc DeleteCustomer(DeleteDetails) returns (empty) ;
     rpc GetByCustomerId(GetbyId) returns (CustomerDetails);
-    rpc IsValidCustomer(CustomerDetails) returns (IsValidUser);
+    rpc IsValidCustomer(UserDetails) returns (IsValidUser);
 }
 
 message CustomerDetails {
@@ -83,3 +83,8 @@ message IsValidUser {
     bool isValid =1;
 }
 
+message UserDetails {
+    string Email =1;
+    string Password =2;
+    string Customerid =3;
+}

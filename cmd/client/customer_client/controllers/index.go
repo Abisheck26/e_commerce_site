@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"time"
 
+	_ "e_commerce_site/cmd/client/customer_client/docs"
 	grpcclient "e_commerce_site/cmd/client/grpcClient"
 	"e_commerce_site/e_commerce_DAL/models"
 	"e_commerce_site/e_commerce_DAL/services"
@@ -56,9 +57,7 @@ type CustomerDBResponse struct {
 }
 
 type Token struct {
-	CustomerId string `json:"customerid" bson:"customerid"`
-	Email      string `json:"email" bson:"email"`
-	Token      string `json:"token" bson:"token"`
+	Token string `json:"token" bson:"token"`
 }
 type UpdateResponse struct {
 	Message string `json:"message" bson:"message"`
@@ -115,7 +114,6 @@ func HandlerSignUp(c *gin.Context) {
 		return
 	}
 
-
 	pass, err2 := services.HashPassword(request.Password)
 	if err2 != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": err2.Error()})
@@ -140,19 +138,32 @@ func HandlerSignUp(c *gin.Context) {
 // @Router /users/signin [post]
 func HandlerSignIn(c *gin.Context) {
 	grpcClient, _ := grpcclient.GetGrpcCustomerServiceClient()
-	var user *pb.CustomerDetails
+	var user User
 	if err := c.ShouldBindJSON(&user); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid request body"})
 		return
 	}
-	isValid,_ := grpcClient.IsValidCustomer(c.Request.Context(),user)
-	if  isValid.IsValid{
+	fmt.Println(user.Email)
+	result, err3 := grpcClient.IsValidCustomer(c.Request.Context(), &pb.UserDetails{
+		Customerid: user.CustomerId,
+		Email:      user.Email,
+		Password:   user.Password,
+	})
+	if err3 != nil {
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err3.Error()})
+		return
+	}
+
+	fmt.Println("hi")
+
+	if result.IsValid {
+		fmt.Println("hello")
 		token, err := createToken(user.Email, user.CustomerId)
 		if err != nil {
 			c.JSON(http.StatusInternalServerError, gin.H{"error": "Token creation failed"})
 			return
 		}
-		
+		fmt.Println(token)
 		grpcClient.CreateTokens(c.Request.Context(), &pb.Token{Email: user.Email, Token: token, Customerid: user.CustomerId})
 
 		c.JSON(http.StatusOK, gin.H{"token": token})
@@ -284,8 +295,6 @@ func HandlerResetPassword(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"value": response})
 
 }
-
-
 
 func createToken(email, customerid string) (string, error) {
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{

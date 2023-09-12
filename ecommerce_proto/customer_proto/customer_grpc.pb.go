@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.2.0
 // - protoc             v3.12.4
-// source: ecommerce_proto/customer_proto/customer.proto
+// source: customer_proto/customer.proto
 
 package ecommerce_proto
 
@@ -28,7 +28,7 @@ type CustomerServiceClient interface {
 	UpdateCustomer(ctx context.Context, in *UpdateDetails, opts ...grpc.CallOption) (*CustomerResponse, error)
 	DeleteCustomer(ctx context.Context, in *DeleteDetails, opts ...grpc.CallOption) (*Empty, error)
 	GetByCustomerId(ctx context.Context, in *GetbyId, opts ...grpc.CallOption) (*CustomerDetails, error)
-	IsValidCustomer(ctx context.Context, in *CustomerDetails, opts ...grpc.CallOption) (*IsValidUser, error)
+	IsValidCustomer(ctx context.Context, in *UserDetails, opts ...grpc.CallOption) (*IsValidUser, error)
 }
 
 type customerServiceClient struct {
@@ -93,7 +93,7 @@ func (c *customerServiceClient) GetByCustomerId(ctx context.Context, in *GetbyId
 	return out, nil
 }
 
-func (c *customerServiceClient) IsValidCustomer(ctx context.Context, in *CustomerDetails, opts ...grpc.CallOption) (*IsValidUser, error) {
+func (c *customerServiceClient) IsValidCustomer(ctx context.Context, in *UserDetails, opts ...grpc.CallOption) (*IsValidUser, error) {
 	out := new(IsValidUser)
 	err := c.cc.Invoke(ctx, "/customer.CustomerService/IsValidCustomer", in, out, opts...)
 	if err != nil {
@@ -112,7 +112,7 @@ type CustomerServiceServer interface {
 	UpdateCustomer(context.Context, *UpdateDetails) (*CustomerResponse, error)
 	DeleteCustomer(context.Context, *DeleteDetails) (*Empty, error)
 	GetByCustomerId(context.Context, *GetbyId) (*CustomerDetails, error)
-	IsValidCustomer(context.Context, *CustomerDetails) (*IsValidUser, error)
+	IsValidCustomer(context.Context, *UserDetails) (*IsValidUser, error)
 	mustEmbedUnimplementedCustomerServiceServer()
 }
 
@@ -138,7 +138,7 @@ func (UnimplementedCustomerServiceServer) DeleteCustomer(context.Context, *Delet
 func (UnimplementedCustomerServiceServer) GetByCustomerId(context.Context, *GetbyId) (*CustomerDetails, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetByCustomerId not implemented")
 }
-func (UnimplementedCustomerServiceServer) IsValidCustomer(context.Context, *CustomerDetails) (*IsValidUser, error) {
+func (UnimplementedCustomerServiceServer) IsValidCustomer(context.Context, *UserDetails) (*IsValidUser, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method IsValidCustomer not implemented")
 }
 func (UnimplementedCustomerServiceServer) mustEmbedUnimplementedCustomerServiceServer() {}
@@ -263,7 +263,7 @@ func _CustomerService_GetByCustomerId_Handler(srv interface{}, ctx context.Conte
 }
 
 func _CustomerService_IsValidCustomer_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(CustomerDetails)
+	in := new(UserDetails)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -275,7 +275,7 @@ func _CustomerService_IsValidCustomer_Handler(srv interface{}, ctx context.Conte
 		FullMethod: "/customer.CustomerService/IsValidCustomer",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(CustomerServiceServer).IsValidCustomer(ctx, req.(*CustomerDetails))
+		return srv.(CustomerServiceServer).IsValidCustomer(ctx, req.(*UserDetails))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -317,5 +317,5 @@ var CustomerService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "ecommerce_proto/customer_proto/customer.proto",
+	Metadata: "customer_proto/customer.proto",
 }

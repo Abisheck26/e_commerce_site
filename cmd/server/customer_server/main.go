@@ -29,6 +29,7 @@ func main() {
 	mongoclient, err := config.ConnectDataBase()
 	defer mongoclient.Disconnect(context.TODO())
 	if err != nil {
+		fmt.Println("error connecting to Mongo")
 		panic(err)
 	}
 	initDatabase(mongoclient)
@@ -41,6 +42,7 @@ func main() {
 	s := grpc.NewServer()
 	healthServer := health.NewServer()
 	grpc_health_v1.RegisterHealthServer(s, healthServer)
+	// pro.RegisterCustomerServiceServer(s, &controllers.RPCServer{})
 	pro.RegisterCustomerServiceServer(s, &controllers.RPCServer{})
 	fmt.Println("Server listening on", constants.Customer_Port)
 	if err := s.Serve(lis); err != nil {

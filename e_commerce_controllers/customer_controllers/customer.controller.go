@@ -7,11 +7,12 @@ import (
 
 	"log"
 
-	"github.com/gin-gonic/gin"
+	// "github.com/gin-gonic/gin"
 
-	"e_commerce_site/e_commerce_DAL/models"
 	"e_commerce_site/e_commerce_DAL/interfaces"
+	"e_commerce_site/e_commerce_DAL/models"
 	pro "e_commerce_site/ecommerce_proto/customer_proto"
+
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 )
@@ -21,7 +22,7 @@ type RPCServer struct {
 }
 
 var (
-	ctx             gin.Context
+	// ctx             gin.Context
 	CustomerService interfaces.ICustomer
 )
 
@@ -216,4 +217,40 @@ func (s *RPCServer) GetByCustomerId(ctx context.Context, req *pro.GetbyId) (*pro
 	}
 
 	return responseCustomer, nil
+}
+
+// func IsValidCustomer(_ context.Context, user *pro.UserDetails) (*pro.IsValidUser, error) {
+// 	fmt.Println("isValid controller")
+// 	fmt.Println(user.Customerid)
+// 	fmt.Println(user.Email)
+// 	fmt.Println(user.Password)
+// 	userController := models.Customer{
+// 		Email:      user.Email,
+// 		Password:   user.Password,
+// 		CustomerId: user.Customerid,
+// 	}
+
+// 	isValid, _ := CustomerService.IsValidCustomer(&userController)
+// 	isValid2 := &pro.IsValidUser{
+// 		IsValid: isValid.IsValid,
+// 	}
+
+// 	fmt.Println(isValid2, "response from service : iam controller")
+// 	return isValid2, nil
+
+// }
+
+func (s *RPCServer) IsValidCustomer(ctx context.Context, user *pro.UserDetails) (*pro.IsValidUser, error) {
+	userController := models.Customer{
+		Email:      user.Email,
+		Password:   user.Password,
+		CustomerId: user.Customerid,
+	}
+
+	isValid, _ := CustomerService.IsValidCustomer(&userController)
+	isValid2 := &pro.IsValidUser{
+		IsValid: isValid.IsValid,
+	}
+
+	return isValid2, nil
 }

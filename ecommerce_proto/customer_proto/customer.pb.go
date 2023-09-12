@@ -2,7 +2,7 @@
 // versions:
 // 	protoc-gen-go v1.28.1
 // 	protoc        v3.12.4
-// source: ecommerce_proto/customer_proto/customer.proto
+// source: customer_proto/customer.proto
 
 package ecommerce_proto
 
@@ -37,7 +37,7 @@ type CustomerDetails struct {
 func (x *CustomerDetails) Reset() {
 	*x = CustomerDetails{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_ecommerce_proto_customer_proto_customer_proto_msgTypes[0]
+		mi := &file_customer_proto_customer_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -50,7 +50,7 @@ func (x *CustomerDetails) String() string {
 func (*CustomerDetails) ProtoMessage() {}
 
 func (x *CustomerDetails) ProtoReflect() protoreflect.Message {
-	mi := &file_ecommerce_proto_customer_proto_customer_proto_msgTypes[0]
+	mi := &file_customer_proto_customer_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -63,7 +63,7 @@ func (x *CustomerDetails) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CustomerDetails.ProtoReflect.Descriptor instead.
 func (*CustomerDetails) Descriptor() ([]byte, []int) {
-	return file_ecommerce_proto_customer_proto_customer_proto_rawDescGZIP(), []int{0}
+	return file_customer_proto_customer_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *CustomerDetails) GetCustomerId() string {
@@ -131,7 +131,7 @@ type Address struct {
 func (x *Address) Reset() {
 	*x = Address{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_ecommerce_proto_customer_proto_customer_proto_msgTypes[1]
+		mi := &file_customer_proto_customer_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -144,7 +144,7 @@ func (x *Address) String() string {
 func (*Address) ProtoMessage() {}
 
 func (x *Address) ProtoReflect() protoreflect.Message {
-	mi := &file_ecommerce_proto_customer_proto_customer_proto_msgTypes[1]
+	mi := &file_customer_proto_customer_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -157,7 +157,7 @@ func (x *Address) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Address.ProtoReflect.Descriptor instead.
 func (*Address) Descriptor() ([]byte, []int) {
-	return file_ecommerce_proto_customer_proto_customer_proto_rawDescGZIP(), []int{1}
+	return file_customer_proto_customer_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *Address) GetCountry() string {
@@ -216,7 +216,7 @@ type ShippingAddress struct {
 func (x *ShippingAddress) Reset() {
 	*x = ShippingAddress{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_ecommerce_proto_customer_proto_customer_proto_msgTypes[2]
+		mi := &file_customer_proto_customer_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -229,7 +229,7 @@ func (x *ShippingAddress) String() string {
 func (*ShippingAddress) ProtoMessage() {}
 
 func (x *ShippingAddress) ProtoReflect() protoreflect.Message {
-	mi := &file_ecommerce_proto_customer_proto_customer_proto_msgTypes[2]
+	mi := &file_customer_proto_customer_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -242,7 +242,7 @@ func (x *ShippingAddress) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use ShippingAddress.ProtoReflect.Descriptor instead.
 func (*ShippingAddress) Descriptor() ([]byte, []int) {
-	return file_ecommerce_proto_customer_proto_customer_proto_rawDescGZIP(), []int{2}
+	return file_customer_proto_customer_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *ShippingAddress) GetStreet1() string {
@@ -285,7 +285,7 @@ type CustomerLoginRequest struct {
 func (x *CustomerLoginRequest) Reset() {
 	*x = CustomerLoginRequest{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_ecommerce_proto_customer_proto_customer_proto_msgTypes[3]
+		mi := &file_customer_proto_customer_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -298,7 +298,7 @@ func (x *CustomerLoginRequest) String() string {
 func (*CustomerLoginRequest) ProtoMessage() {}
 
 func (x *CustomerLoginRequest) ProtoReflect() protoreflect.Message {
-	mi := &file_ecommerce_proto_customer_proto_customer_proto_msgTypes[3]
+	mi := &file_customer_proto_customer_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -311,7 +311,7 @@ func (x *CustomerLoginRequest) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CustomerLoginRequest.ProtoReflect.Descriptor instead.
 func (*CustomerLoginRequest) Descriptor() ([]byte, []int) {
-	return file_ecommerce_proto_customer_proto_customer_proto_rawDescGZIP(), []int{3}
+	return file_customer_proto_customer_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *CustomerLoginRequest) GetEmail() string {
@@ -339,7 +339,7 @@ type CustomerResponse struct {
 func (x *CustomerResponse) Reset() {
 	*x = CustomerResponse{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_ecommerce_proto_customer_proto_customer_proto_msgTypes[4]
+		mi := &file_customer_proto_customer_proto_msgTypes[4]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -352,7 +352,7 @@ func (x *CustomerResponse) String() string {
 func (*CustomerResponse) ProtoMessage() {}
 
 func (x *CustomerResponse) ProtoReflect() protoreflect.Message {
-	mi := &file_ecommerce_proto_customer_proto_customer_proto_msgTypes[4]
+	mi := &file_customer_proto_customer_proto_msgTypes[4]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -365,7 +365,7 @@ func (x *CustomerResponse) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use CustomerResponse.ProtoReflect.Descriptor instead.
 func (*CustomerResponse) Descriptor() ([]byte, []int) {
-	return file_ecommerce_proto_customer_proto_customer_proto_rawDescGZIP(), []int{4}
+	return file_customer_proto_customer_proto_rawDescGZIP(), []int{4}
 }
 
 func (x *CustomerResponse) GetCustomer_ID() string {
@@ -384,7 +384,7 @@ type Empty struct {
 func (x *Empty) Reset() {
 	*x = Empty{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_ecommerce_proto_customer_proto_customer_proto_msgTypes[5]
+		mi := &file_customer_proto_customer_proto_msgTypes[5]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -397,7 +397,7 @@ func (x *Empty) String() string {
 func (*Empty) ProtoMessage() {}
 
 func (x *Empty) ProtoReflect() protoreflect.Message {
-	mi := &file_ecommerce_proto_customer_proto_customer_proto_msgTypes[5]
+	mi := &file_customer_proto_customer_proto_msgTypes[5]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -410,7 +410,7 @@ func (x *Empty) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Empty.ProtoReflect.Descriptor instead.
 func (*Empty) Descriptor() ([]byte, []int) {
-	return file_ecommerce_proto_customer_proto_customer_proto_rawDescGZIP(), []int{5}
+	return file_customer_proto_customer_proto_rawDescGZIP(), []int{5}
 }
 
 type Token struct {
@@ -426,7 +426,7 @@ type Token struct {
 func (x *Token) Reset() {
 	*x = Token{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_ecommerce_proto_customer_proto_customer_proto_msgTypes[6]
+		mi := &file_customer_proto_customer_proto_msgTypes[6]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -439,7 +439,7 @@ func (x *Token) String() string {
 func (*Token) ProtoMessage() {}
 
 func (x *Token) ProtoReflect() protoreflect.Message {
-	mi := &file_ecommerce_proto_customer_proto_customer_proto_msgTypes[6]
+	mi := &file_customer_proto_customer_proto_msgTypes[6]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -452,7 +452,7 @@ func (x *Token) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use Token.ProtoReflect.Descriptor instead.
 func (*Token) Descriptor() ([]byte, []int) {
-	return file_ecommerce_proto_customer_proto_customer_proto_rawDescGZIP(), []int{6}
+	return file_customer_proto_customer_proto_rawDescGZIP(), []int{6}
 }
 
 func (x *Token) GetEmail() string {
@@ -489,7 +489,7 @@ type PasswordDetails struct {
 func (x *PasswordDetails) Reset() {
 	*x = PasswordDetails{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_ecommerce_proto_customer_proto_customer_proto_msgTypes[7]
+		mi := &file_customer_proto_customer_proto_msgTypes[7]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -502,7 +502,7 @@ func (x *PasswordDetails) String() string {
 func (*PasswordDetails) ProtoMessage() {}
 
 func (x *PasswordDetails) ProtoReflect() protoreflect.Message {
-	mi := &file_ecommerce_proto_customer_proto_customer_proto_msgTypes[7]
+	mi := &file_customer_proto_customer_proto_msgTypes[7]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -515,7 +515,7 @@ func (x *PasswordDetails) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use PasswordDetails.ProtoReflect.Descriptor instead.
 func (*PasswordDetails) Descriptor() ([]byte, []int) {
-	return file_ecommerce_proto_customer_proto_customer_proto_rawDescGZIP(), []int{7}
+	return file_customer_proto_customer_proto_rawDescGZIP(), []int{7}
 }
 
 func (x *PasswordDetails) GetEmail() string {
@@ -553,7 +553,7 @@ type UpdateDetails struct {
 func (x *UpdateDetails) Reset() {
 	*x = UpdateDetails{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_ecommerce_proto_customer_proto_customer_proto_msgTypes[8]
+		mi := &file_customer_proto_customer_proto_msgTypes[8]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -566,7 +566,7 @@ func (x *UpdateDetails) String() string {
 func (*UpdateDetails) ProtoMessage() {}
 
 func (x *UpdateDetails) ProtoReflect() protoreflect.Message {
-	mi := &file_ecommerce_proto_customer_proto_customer_proto_msgTypes[8]
+	mi := &file_customer_proto_customer_proto_msgTypes[8]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -579,7 +579,7 @@ func (x *UpdateDetails) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use UpdateDetails.ProtoReflect.Descriptor instead.
 func (*UpdateDetails) Descriptor() ([]byte, []int) {
-	return file_ecommerce_proto_customer_proto_customer_proto_rawDescGZIP(), []int{8}
+	return file_customer_proto_customer_proto_rawDescGZIP(), []int{8}
 }
 
 func (x *UpdateDetails) GetCustomerId() string {
@@ -621,7 +621,7 @@ type DeleteDetails struct {
 func (x *DeleteDetails) Reset() {
 	*x = DeleteDetails{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_ecommerce_proto_customer_proto_customer_proto_msgTypes[9]
+		mi := &file_customer_proto_customer_proto_msgTypes[9]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -634,7 +634,7 @@ func (x *DeleteDetails) String() string {
 func (*DeleteDetails) ProtoMessage() {}
 
 func (x *DeleteDetails) ProtoReflect() protoreflect.Message {
-	mi := &file_ecommerce_proto_customer_proto_customer_proto_msgTypes[9]
+	mi := &file_customer_proto_customer_proto_msgTypes[9]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -647,7 +647,7 @@ func (x *DeleteDetails) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use DeleteDetails.ProtoReflect.Descriptor instead.
 func (*DeleteDetails) Descriptor() ([]byte, []int) {
-	return file_ecommerce_proto_customer_proto_customer_proto_rawDescGZIP(), []int{9}
+	return file_customer_proto_customer_proto_rawDescGZIP(), []int{9}
 }
 
 func (x *DeleteDetails) GetCustomerID() string {
@@ -668,7 +668,7 @@ type GetbyId struct {
 func (x *GetbyId) Reset() {
 	*x = GetbyId{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_ecommerce_proto_customer_proto_customer_proto_msgTypes[10]
+		mi := &file_customer_proto_customer_proto_msgTypes[10]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -681,7 +681,7 @@ func (x *GetbyId) String() string {
 func (*GetbyId) ProtoMessage() {}
 
 func (x *GetbyId) ProtoReflect() protoreflect.Message {
-	mi := &file_ecommerce_proto_customer_proto_customer_proto_msgTypes[10]
+	mi := &file_customer_proto_customer_proto_msgTypes[10]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -694,7 +694,7 @@ func (x *GetbyId) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use GetbyId.ProtoReflect.Descriptor instead.
 func (*GetbyId) Descriptor() ([]byte, []int) {
-	return file_ecommerce_proto_customer_proto_customer_proto_rawDescGZIP(), []int{10}
+	return file_customer_proto_customer_proto_rawDescGZIP(), []int{10}
 }
 
 func (x *GetbyId) GetToken() string {
@@ -715,7 +715,7 @@ type IsValidUser struct {
 func (x *IsValidUser) Reset() {
 	*x = IsValidUser{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_ecommerce_proto_customer_proto_customer_proto_msgTypes[11]
+		mi := &file_customer_proto_customer_proto_msgTypes[11]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -728,7 +728,7 @@ func (x *IsValidUser) String() string {
 func (*IsValidUser) ProtoMessage() {}
 
 func (x *IsValidUser) ProtoReflect() protoreflect.Message {
-	mi := &file_ecommerce_proto_customer_proto_customer_proto_msgTypes[11]
+	mi := &file_customer_proto_customer_proto_msgTypes[11]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -741,7 +741,7 @@ func (x *IsValidUser) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use IsValidUser.ProtoReflect.Descriptor instead.
 func (*IsValidUser) Descriptor() ([]byte, []int) {
-	return file_ecommerce_proto_customer_proto_customer_proto_rawDescGZIP(), []int{11}
+	return file_customer_proto_customer_proto_rawDescGZIP(), []int{11}
 }
 
 func (x *IsValidUser) GetIsValid() bool {
@@ -751,11 +751,73 @@ func (x *IsValidUser) GetIsValid() bool {
 	return false
 }
 
-var File_ecommerce_proto_customer_proto_customer_proto protoreflect.FileDescriptor
+type UserDetails struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
 
-var file_ecommerce_proto_customer_proto_customer_proto_rawDesc = []byte{
-	0x0a, 0x2d, 0x65, 0x63, 0x6f, 0x6d, 0x6d, 0x65, 0x72, 0x63, 0x65, 0x5f, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x2f, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x5f, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	Email      string `protobuf:"bytes,1,opt,name=Email,proto3" json:"Email,omitempty"`
+	Password   string `protobuf:"bytes,2,opt,name=Password,proto3" json:"Password,omitempty"`
+	Customerid string `protobuf:"bytes,3,opt,name=Customerid,proto3" json:"Customerid,omitempty"`
+}
+
+func (x *UserDetails) Reset() {
+	*x = UserDetails{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_customer_proto_customer_proto_msgTypes[12]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *UserDetails) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*UserDetails) ProtoMessage() {}
+
+func (x *UserDetails) ProtoReflect() protoreflect.Message {
+	mi := &file_customer_proto_customer_proto_msgTypes[12]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use UserDetails.ProtoReflect.Descriptor instead.
+func (*UserDetails) Descriptor() ([]byte, []int) {
+	return file_customer_proto_customer_proto_rawDescGZIP(), []int{12}
+}
+
+func (x *UserDetails) GetEmail() string {
+	if x != nil {
+		return x.Email
+	}
+	return ""
+}
+
+func (x *UserDetails) GetPassword() string {
+	if x != nil {
+		return x.Password
+	}
+	return ""
+}
+
+func (x *UserDetails) GetCustomerid() string {
+	if x != nil {
+		return x.Customerid
+	}
+	return ""
+}
+
+var File_customer_proto_customer_proto protoreflect.FileDescriptor
+
+var file_customer_proto_customer_proto_rawDesc = []byte{
+	0x0a, 0x1d, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x5f, 0x70, 0x72, 0x6f, 0x74, 0x6f,
 	0x2f, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12,
 	0x08, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x22, 0x8f, 0x02, 0x0a, 0x0f, 0x43, 0x75,
 	0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x73, 0x12, 0x1e, 0x0a,
@@ -827,56 +889,62 @@ var file_ecommerce_proto_customer_proto_customer_proto_rawDesc = []byte{
 	0x18, 0x01, 0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x22, 0x27, 0x0a,
 	0x0b, 0x49, 0x73, 0x56, 0x61, 0x6c, 0x69, 0x64, 0x55, 0x73, 0x65, 0x72, 0x12, 0x18, 0x0a, 0x07,
 	0x69, 0x73, 0x56, 0x61, 0x6c, 0x69, 0x64, 0x18, 0x01, 0x20, 0x01, 0x28, 0x08, 0x52, 0x07, 0x69,
-	0x73, 0x56, 0x61, 0x6c, 0x69, 0x64, 0x32, 0xde, 0x03, 0x0a, 0x0f, 0x43, 0x75, 0x73, 0x74, 0x6f,
-	0x6d, 0x65, 0x72, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x47, 0x0a, 0x0e, 0x43, 0x72,
-	0x65, 0x61, 0x74, 0x65, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x12, 0x19, 0x2e, 0x63,
-	0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x2e, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72,
-	0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x73, 0x1a, 0x1a, 0x2e, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d,
-	0x65, 0x72, 0x2e, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f,
-	0x6e, 0x73, 0x65, 0x12, 0x30, 0x0a, 0x0c, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x54, 0x6f, 0x6b,
-	0x65, 0x6e, 0x73, 0x12, 0x0f, 0x2e, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x2e, 0x54,
-	0x6f, 0x6b, 0x65, 0x6e, 0x1a, 0x0f, 0x2e, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x2e,
-	0x65, 0x6d, 0x70, 0x74, 0x79, 0x12, 0x47, 0x0a, 0x0e, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x50,
-	0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x12, 0x19, 0x2e, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d,
-	0x65, 0x72, 0x2e, 0x50, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x44, 0x65, 0x74, 0x61, 0x69,
-	0x6c, 0x73, 0x1a, 0x1a, 0x2e, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x2e, 0x43, 0x75,
-	0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x45,
-	0x0a, 0x0e, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72,
-	0x12, 0x17, 0x2e, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x2e, 0x55, 0x70, 0x64, 0x61,
-	0x74, 0x65, 0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x73, 0x1a, 0x1a, 0x2e, 0x63, 0x75, 0x73, 0x74,
-	0x6f, 0x6d, 0x65, 0x72, 0x2e, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x52, 0x65, 0x73,
-	0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x3a, 0x0a, 0x0e, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x43,
-	0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x12, 0x17, 0x2e, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d,
-	0x65, 0x72, 0x2e, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x73,
-	0x1a, 0x0f, 0x2e, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x2e, 0x65, 0x6d, 0x70, 0x74,
-	0x79, 0x12, 0x3f, 0x0a, 0x0f, 0x47, 0x65, 0x74, 0x42, 0x79, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d,
-	0x65, 0x72, 0x49, 0x64, 0x12, 0x11, 0x2e, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x2e,
-	0x47, 0x65, 0x74, 0x62, 0x79, 0x49, 0x64, 0x1a, 0x19, 0x2e, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d,
-	0x65, 0x72, 0x2e, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x44, 0x65, 0x74, 0x61, 0x69,
-	0x6c, 0x73, 0x12, 0x43, 0x0a, 0x0f, 0x49, 0x73, 0x56, 0x61, 0x6c, 0x69, 0x64, 0x43, 0x75, 0x73,
-	0x74, 0x6f, 0x6d, 0x65, 0x72, 0x12, 0x19, 0x2e, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72,
-	0x2e, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x73,
-	0x1a, 0x15, 0x2e, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x2e, 0x49, 0x73, 0x56, 0x61,
-	0x6c, 0x69, 0x64, 0x55, 0x73, 0x65, 0x72, 0x42, 0x28, 0x5a, 0x26, 0x67, 0x69, 0x74, 0x68, 0x75,
-	0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x53, 0x75, 0x72, 0x65, 0x6e, 0x64, 0x68, 0x61, 0x72, 0x48,
-	0x4b, 0x2f, 0x65, 0x63, 0x6f, 0x6d, 0x6d, 0x65, 0x72, 0x63, 0x65, 0x2d, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
+	0x73, 0x56, 0x61, 0x6c, 0x69, 0x64, 0x22, 0x5f, 0x0a, 0x0b, 0x55, 0x73, 0x65, 0x72, 0x44, 0x65,
+	0x74, 0x61, 0x69, 0x6c, 0x73, 0x12, 0x14, 0x0a, 0x05, 0x45, 0x6d, 0x61, 0x69, 0x6c, 0x18, 0x01,
+	0x20, 0x01, 0x28, 0x09, 0x52, 0x05, 0x45, 0x6d, 0x61, 0x69, 0x6c, 0x12, 0x1a, 0x0a, 0x08, 0x50,
+	0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x18, 0x02, 0x20, 0x01, 0x28, 0x09, 0x52, 0x08, 0x50,
+	0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x12, 0x1e, 0x0a, 0x0a, 0x43, 0x75, 0x73, 0x74, 0x6f,
+	0x6d, 0x65, 0x72, 0x69, 0x64, 0x18, 0x03, 0x20, 0x01, 0x28, 0x09, 0x52, 0x0a, 0x43, 0x75, 0x73,
+	0x74, 0x6f, 0x6d, 0x65, 0x72, 0x69, 0x64, 0x32, 0xda, 0x03, 0x0a, 0x0f, 0x43, 0x75, 0x73, 0x74,
+	0x6f, 0x6d, 0x65, 0x72, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x47, 0x0a, 0x0e, 0x43,
+	0x72, 0x65, 0x61, 0x74, 0x65, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x12, 0x19, 0x2e,
+	0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x2e, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65,
+	0x72, 0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x73, 0x1a, 0x1a, 0x2e, 0x63, 0x75, 0x73, 0x74, 0x6f,
+	0x6d, 0x65, 0x72, 0x2e, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70,
+	0x6f, 0x6e, 0x73, 0x65, 0x12, 0x30, 0x0a, 0x0c, 0x43, 0x72, 0x65, 0x61, 0x74, 0x65, 0x54, 0x6f,
+	0x6b, 0x65, 0x6e, 0x73, 0x12, 0x0f, 0x2e, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x2e,
+	0x54, 0x6f, 0x6b, 0x65, 0x6e, 0x1a, 0x0f, 0x2e, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72,
+	0x2e, 0x65, 0x6d, 0x70, 0x74, 0x79, 0x12, 0x47, 0x0a, 0x0e, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65,
+	0x50, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x12, 0x19, 0x2e, 0x63, 0x75, 0x73, 0x74, 0x6f,
+	0x6d, 0x65, 0x72, 0x2e, 0x50, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x44, 0x65, 0x74, 0x61,
+	0x69, 0x6c, 0x73, 0x1a, 0x1a, 0x2e, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x2e, 0x43,
+	0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12,
+	0x45, 0x0a, 0x0e, 0x55, 0x70, 0x64, 0x61, 0x74, 0x65, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65,
+	0x72, 0x12, 0x17, 0x2e, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x2e, 0x55, 0x70, 0x64,
+	0x61, 0x74, 0x65, 0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x73, 0x1a, 0x1a, 0x2e, 0x63, 0x75, 0x73,
+	0x74, 0x6f, 0x6d, 0x65, 0x72, 0x2e, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x52, 0x65,
+	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x3a, 0x0a, 0x0e, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65,
+	0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x12, 0x17, 0x2e, 0x63, 0x75, 0x73, 0x74, 0x6f,
+	0x6d, 0x65, 0x72, 0x2e, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x44, 0x65, 0x74, 0x61, 0x69, 0x6c,
+	0x73, 0x1a, 0x0f, 0x2e, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x2e, 0x65, 0x6d, 0x70,
+	0x74, 0x79, 0x12, 0x3f, 0x0a, 0x0f, 0x47, 0x65, 0x74, 0x42, 0x79, 0x43, 0x75, 0x73, 0x74, 0x6f,
+	0x6d, 0x65, 0x72, 0x49, 0x64, 0x12, 0x11, 0x2e, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72,
+	0x2e, 0x47, 0x65, 0x74, 0x62, 0x79, 0x49, 0x64, 0x1a, 0x19, 0x2e, 0x63, 0x75, 0x73, 0x74, 0x6f,
+	0x6d, 0x65, 0x72, 0x2e, 0x43, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x44, 0x65, 0x74, 0x61,
+	0x69, 0x6c, 0x73, 0x12, 0x3f, 0x0a, 0x0f, 0x49, 0x73, 0x56, 0x61, 0x6c, 0x69, 0x64, 0x43, 0x75,
+	0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x12, 0x15, 0x2e, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65,
+	0x72, 0x2e, 0x55, 0x73, 0x65, 0x72, 0x44, 0x65, 0x74, 0x61, 0x69, 0x6c, 0x73, 0x1a, 0x15, 0x2e,
+	0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x2e, 0x49, 0x73, 0x56, 0x61, 0x6c, 0x69, 0x64,
+	0x55, 0x73, 0x65, 0x72, 0x42, 0x28, 0x5a, 0x26, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63,
+	0x6f, 0x6d, 0x2f, 0x53, 0x75, 0x72, 0x65, 0x6e, 0x64, 0x68, 0x61, 0x72, 0x48, 0x4b, 0x2f, 0x65,
+	0x63, 0x6f, 0x6d, 0x6d, 0x65, 0x72, 0x63, 0x65, 0x2d, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x06,
+	0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
-	file_ecommerce_proto_customer_proto_customer_proto_rawDescOnce sync.Once
-	file_ecommerce_proto_customer_proto_customer_proto_rawDescData = file_ecommerce_proto_customer_proto_customer_proto_rawDesc
+	file_customer_proto_customer_proto_rawDescOnce sync.Once
+	file_customer_proto_customer_proto_rawDescData = file_customer_proto_customer_proto_rawDesc
 )
 
-func file_ecommerce_proto_customer_proto_customer_proto_rawDescGZIP() []byte {
-	file_ecommerce_proto_customer_proto_customer_proto_rawDescOnce.Do(func() {
-		file_ecommerce_proto_customer_proto_customer_proto_rawDescData = protoimpl.X.CompressGZIP(file_ecommerce_proto_customer_proto_customer_proto_rawDescData)
+func file_customer_proto_customer_proto_rawDescGZIP() []byte {
+	file_customer_proto_customer_proto_rawDescOnce.Do(func() {
+		file_customer_proto_customer_proto_rawDescData = protoimpl.X.CompressGZIP(file_customer_proto_customer_proto_rawDescData)
 	})
-	return file_ecommerce_proto_customer_proto_customer_proto_rawDescData
+	return file_customer_proto_customer_proto_rawDescData
 }
 
-var file_ecommerce_proto_customer_proto_customer_proto_msgTypes = make([]protoimpl.MessageInfo, 12)
-var file_ecommerce_proto_customer_proto_customer_proto_goTypes = []interface{}{
+var file_customer_proto_customer_proto_msgTypes = make([]protoimpl.MessageInfo, 13)
+var file_customer_proto_customer_proto_goTypes = []interface{}{
 	(*CustomerDetails)(nil),      // 0: customer.CustomerDetails
 	(*Address)(nil),              // 1: customer.Address
 	(*ShippingAddress)(nil),      // 2: customer.ShippingAddress
@@ -889,8 +957,9 @@ var file_ecommerce_proto_customer_proto_customer_proto_goTypes = []interface{}{
 	(*DeleteDetails)(nil),        // 9: customer.DeleteDetails
 	(*GetbyId)(nil),              // 10: customer.GetbyId
 	(*IsValidUser)(nil),          // 11: customer.IsValidUser
+	(*UserDetails)(nil),          // 12: customer.UserDetails
 }
-var file_ecommerce_proto_customer_proto_customer_proto_depIdxs = []int32{
+var file_customer_proto_customer_proto_depIdxs = []int32{
 	1,  // 0: customer.CustomerDetails.Address:type_name -> customer.Address
 	2,  // 1: customer.CustomerDetails.ShippingAddress:type_name -> customer.ShippingAddress
 	0,  // 2: customer.CustomerService.CreateCustomer:input_type -> customer.CustomerDetails
@@ -899,7 +968,7 @@ var file_ecommerce_proto_customer_proto_customer_proto_depIdxs = []int32{
 	8,  // 5: customer.CustomerService.UpdateCustomer:input_type -> customer.UpdateDetails
 	9,  // 6: customer.CustomerService.DeleteCustomer:input_type -> customer.DeleteDetails
 	10, // 7: customer.CustomerService.GetByCustomerId:input_type -> customer.GetbyId
-	0,  // 8: customer.CustomerService.IsValidCustomer:input_type -> customer.CustomerDetails
+	12, // 8: customer.CustomerService.IsValidCustomer:input_type -> customer.UserDetails
 	4,  // 9: customer.CustomerService.CreateCustomer:output_type -> customer.CustomerResponse
 	5,  // 10: customer.CustomerService.CreateTokens:output_type -> customer.empty
 	4,  // 11: customer.CustomerService.UpdatePassword:output_type -> customer.CustomerResponse
@@ -914,13 +983,13 @@ var file_ecommerce_proto_customer_proto_customer_proto_depIdxs = []int32{
 	0,  // [0:2] is the sub-list for field type_name
 }
 
-func init() { file_ecommerce_proto_customer_proto_customer_proto_init() }
-func file_ecommerce_proto_customer_proto_customer_proto_init() {
-	if File_ecommerce_proto_customer_proto_customer_proto != nil {
+func init() { file_customer_proto_customer_proto_init() }
+func file_customer_proto_customer_proto_init() {
+	if File_customer_proto_customer_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_ecommerce_proto_customer_proto_customer_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_customer_proto_customer_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CustomerDetails); i {
 			case 0:
 				return &v.state
@@ -932,7 +1001,7 @@ func file_ecommerce_proto_customer_proto_customer_proto_init() {
 				return nil
 			}
 		}
-		file_ecommerce_proto_customer_proto_customer_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_customer_proto_customer_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Address); i {
 			case 0:
 				return &v.state
@@ -944,7 +1013,7 @@ func file_ecommerce_proto_customer_proto_customer_proto_init() {
 				return nil
 			}
 		}
-		file_ecommerce_proto_customer_proto_customer_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_customer_proto_customer_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*ShippingAddress); i {
 			case 0:
 				return &v.state
@@ -956,7 +1025,7 @@ func file_ecommerce_proto_customer_proto_customer_proto_init() {
 				return nil
 			}
 		}
-		file_ecommerce_proto_customer_proto_customer_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_customer_proto_customer_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CustomerLoginRequest); i {
 			case 0:
 				return &v.state
@@ -968,7 +1037,7 @@ func file_ecommerce_proto_customer_proto_customer_proto_init() {
 				return nil
 			}
 		}
-		file_ecommerce_proto_customer_proto_customer_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
+		file_customer_proto_customer_proto_msgTypes[4].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*CustomerResponse); i {
 			case 0:
 				return &v.state
@@ -980,7 +1049,7 @@ func file_ecommerce_proto_customer_proto_customer_proto_init() {
 				return nil
 			}
 		}
-		file_ecommerce_proto_customer_proto_customer_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
+		file_customer_proto_customer_proto_msgTypes[5].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Empty); i {
 			case 0:
 				return &v.state
@@ -992,7 +1061,7 @@ func file_ecommerce_proto_customer_proto_customer_proto_init() {
 				return nil
 			}
 		}
-		file_ecommerce_proto_customer_proto_customer_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
+		file_customer_proto_customer_proto_msgTypes[6].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*Token); i {
 			case 0:
 				return &v.state
@@ -1004,7 +1073,7 @@ func file_ecommerce_proto_customer_proto_customer_proto_init() {
 				return nil
 			}
 		}
-		file_ecommerce_proto_customer_proto_customer_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
+		file_customer_proto_customer_proto_msgTypes[7].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*PasswordDetails); i {
 			case 0:
 				return &v.state
@@ -1016,7 +1085,7 @@ func file_ecommerce_proto_customer_proto_customer_proto_init() {
 				return nil
 			}
 		}
-		file_ecommerce_proto_customer_proto_customer_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
+		file_customer_proto_customer_proto_msgTypes[8].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*UpdateDetails); i {
 			case 0:
 				return &v.state
@@ -1028,7 +1097,7 @@ func file_ecommerce_proto_customer_proto_customer_proto_init() {
 				return nil
 			}
 		}
-		file_ecommerce_proto_customer_proto_customer_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+		file_customer_proto_customer_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*DeleteDetails); i {
 			case 0:
 				return &v.state
@@ -1040,7 +1109,7 @@ func file_ecommerce_proto_customer_proto_customer_proto_init() {
 				return nil
 			}
 		}
-		file_ecommerce_proto_customer_proto_customer_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
+		file_customer_proto_customer_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*GetbyId); i {
 			case 0:
 				return &v.state
@@ -1052,8 +1121,20 @@ func file_ecommerce_proto_customer_proto_customer_proto_init() {
 				return nil
 			}
 		}
-		file_ecommerce_proto_customer_proto_customer_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
+		file_customer_proto_customer_proto_msgTypes[11].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*IsValidUser); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_customer_proto_customer_proto_msgTypes[12].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*UserDetails); i {
 			case 0:
 				return &v.state
 			case 1:
@@ -1069,18 +1150,18 @@ func file_ecommerce_proto_customer_proto_customer_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_ecommerce_proto_customer_proto_customer_proto_rawDesc,
+			RawDescriptor: file_customer_proto_customer_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   12,
+			NumMessages:   13,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
-		GoTypes:           file_ecommerce_proto_customer_proto_customer_proto_goTypes,
-		DependencyIndexes: file_ecommerce_proto_customer_proto_customer_proto_depIdxs,
-		MessageInfos:      file_ecommerce_proto_customer_proto_customer_proto_msgTypes,
+		GoTypes:           file_customer_proto_customer_proto_goTypes,
+		DependencyIndexes: file_customer_proto_customer_proto_depIdxs,
+		MessageInfos:      file_customer_proto_customer_proto_msgTypes,
 	}.Build()
-	File_ecommerce_proto_customer_proto_customer_proto = out.File
-	file_ecommerce_proto_customer_proto_customer_proto_rawDesc = nil
-	file_ecommerce_proto_customer_proto_customer_proto_goTypes = nil
-	file_ecommerce_proto_customer_proto_customer_proto_depIdxs = nil
+	File_customer_proto_customer_proto = out.File
+	file_customer_proto_customer_proto_rawDesc = nil
+	file_customer_proto_customer_proto_goTypes = nil
+	file_customer_proto_customer_proto_depIdxs = nil
 }

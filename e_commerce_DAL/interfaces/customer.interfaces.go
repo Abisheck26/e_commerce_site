@@ -11,5 +11,5 @@ type ICustomer interface {
 	UpdateCustomer(cus *models.UpdateRequest) (*models.CustomerDBResponse, error)
 	DeleteCustomer(cus *models.DeleteRequest) error
 	GetByCustomerId(res string) (*models.Customer, error)
-	IsValidUser(cusomter *models.Customer) (bool)
+	IsValidCustomer(cusomter *models.Customer) (*models.IsValidUser, error)
 }

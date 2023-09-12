@@ -4,6 +4,7 @@ import (
 	"github.com/gin-gonic/gin"
  "e_commerce_site/cmd/client/customer_client/controllers"
 	swaggerFiles "github.com/swaggo/files"
+	_"e_commerce_site/cmd/client/customer_client/docs"
 	ginSwagger "github.com/swaggo/gin-swagger"
 )
 

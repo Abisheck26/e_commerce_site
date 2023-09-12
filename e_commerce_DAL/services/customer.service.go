@@ -2,19 +2,18 @@ package services
 
 import (
 	"context"
-	"e_commerce_site/e_commerce_DAL/models"
 	"e_commerce_site/e_commerce_DAL/interfaces"
+	"e_commerce_site/e_commerce_DAL/models"
 	"e_commerce_site/ecommerce_config/config"
 	"fmt"
 	"log"
-
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 	"golang.org/x/crypto/bcrypt"
 	"google.golang.org/grpc/codes"
-	 "google.golang.org/grpc/status"
+	"google.golang.org/grpc/status"
 )
 
 type CustomerService struct {
@@ -205,7 +204,7 @@ func (p *CustomerService) UpdateCustomer(user *models.UpdateRequest) (*models.Cu
 		}
 		return &updatedUser, nil
 	}
-	return &updatedUser, nil
+	
 }
 func (p *CustomerService) DeleteCustomer(user *models.DeleteRequest) error {
 	// Check if the customer ID is provided
@@ -242,21 +241,33 @@ func (p *CustomerService) GetByCustomerId(id string) (*models.Customer, error) {
 	return customer, nil
 
 }
-func (p *CustomerService) IsValidUser(user *models.Customer) (bool) {
-	
+func (p *CustomerService) IsValidCustomer(user *models.Customer) (*models.IsValidUser, error) {
+	fmt.Println("iam service: IsValidUser")
+	fmt.Println(user.CustomerId)
+	fmt.Println(user.Email)
+	fmt.Println(user.Password)
 	query := bson.M{"customerid": user.CustomerId}
 	var customer models.Customer
+	fmt.Println("iam query: IsValidUser", customer.CustomerId)
 	err := p.ProfileCollection.FindOne(p.ctx, query).Decode(&customer)
 	if err != nil {
-		return false
+		fmt.Println("error in decoding")
+		return nil, nil
 	}
 
+	var result2 *models.IsValidUser
 	if customer.Email == user.Email {
 
 		hashedPassword := customer.Password
 		result := VerifyPassword(hashedPassword, user.Password)
-		return result
+		fmt.Println("err in hashpassword in serices")
+		fmt.Println(result)
+		result2 = &models.IsValidUser{
+			IsValid: result,
+		}
+		return result2, nil
+
 	}
-	return false
+	return result2, nil
 
 }

@@ -55,3 +55,7 @@ type DeleteRequest struct {
 type GetbyId struct {
 	Token string `json:"token" bson:"token"`
 }
+
+type IsValidUser struct {
+	IsValid bool `json:"isvalid" bson:"isvalid"`
+}

@@ -1,12 +1,11 @@
 package services
 
 import (
-	"context"
 	"fmt"
 	"testing"
 )
 
-var ctx context.Context
+// var ctx context.Context
 
 func TestVerifyPassword(t *testing.T) {
 
